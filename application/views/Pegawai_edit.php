@@ -16,6 +16,11 @@
                'value'=>$records[0]->kode)); 
             echo ""; 
 
+            echo form_label('Alamat'); 
+            echo form_input(array('id'=>'alamat','name'=>'alamat',
+               'value'=>$records[0]->alamat)); 
+            echo ""; 
+
             echo form_label('Name'); 
             echo form_input(array('id'=>'nama','name'=>'nama',
                'value'=>$records[0]->nama)); 

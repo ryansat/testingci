@@ -26,6 +26,7 @@
 			
          $data = array( 
             'kode' => $this->input->post('kode'), 
+            'alamat' => $this->input->post('alamat'),
             'nama' => $this->input->post('nama') 
          ); 
 			
@@ -50,6 +51,7 @@
 			
          $data = array( 
             'kode' => $this->input->post('kode'), 
+            'alamat' => $this->input->post('alamat'),
             'name' => $this->input->post('name') 
          ); 
 			

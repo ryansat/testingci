@@ -18,13 +18,8 @@
       } 
    
       public function update($data,$kode) { 
-         /*
-         $this->db->set($data); 
-         $this->db->where("kode", $kode); 
-         $this->db->update("pegawai", $data);
-         */
-         
          $this->kode  = $_POST['kode'];
+         $this->alamat  = $_POST['alamat'];
          $this->nama  = $_POST['nama'];
          $this->db->update('pegawai', $this, array('kode' => $_POST['kode']));
       } 

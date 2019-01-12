@@ -12,6 +12,10 @@
             echo form_label('Kode'); 
             echo form_input(array('id'=>'kode','name'=>'kode')); 
             echo "<br/>"; 
+
+            echo form_label('Alamat'); 
+            echo form_input(array('id'=>'alamat','name'=>'alamat')); 
+            echo "<br/>"; 
 			
             echo form_label('Name'); 
             echo form_input(array('id'=>'nama','name'=>'nama')); 
