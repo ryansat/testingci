@@ -34,7 +34,7 @@
    
          $query = $this->db->get("Pegawai"); 
          $data['records'] = $query->result(); 
-         $this->load->view('Pegawai_add',$data); 
+         $this->load->view('Pegawai_view',$data); 
       } 
   
       public function update_Pegawai_view() { 

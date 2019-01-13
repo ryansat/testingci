@@ -7,7 +7,7 @@
    </head>
 	
    <body> 
-      <a href = "pegawai/add/">Add</a>
+      <a href = "pegawai/add_view">Add</a>
 		
       <table border = "1"> 
          <?php 
