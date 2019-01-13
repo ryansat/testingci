@@ -37,6 +37,7 @@
      // $images = glob($data);
       //echo base_url('uploads/a.jpg');   
 
+      
       echo '<img src='.base_url('uploads/'.$image).' /><br />'; ?></p>
       <p></p>  
    </body>

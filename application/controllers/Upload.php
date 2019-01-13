@@ -5,6 +5,8 @@
       public function __construct() { 
          parent::__construct(); 
          $this->load->helper(array('form', 'url')); 
+         $this->load->database(); 
+         $this->load->model('Upload_Model');
       }
 		
       public function index() { 
@@ -26,7 +28,26 @@
 			
          else { 
             $data = array('upload_data' => $this->upload->data()); 
-            //$data = $this->upload->data();
+            $datas = $this->upload->data();
+            $upload_data = $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.           
+            
+            $image = '';
+            foreach ($data as $item => $value):
+               if ($item == 'file_name')
+               {
+                  $image = $value;
+               }
+
+               $file_name = $value;
+            endforeach;
+            $image = $datas['file_name'];//implode(', ', $file_name);
+            print_r($image);
+            $path = 'uploads/'.$image;
+            $insertData = array( 
+               'url' => $path, 
+            ); 
+            print_r($insertData);
+            $this->Upload_Model->insert($insertData); 
             $this->load->view('upload_success', $data); 
          } 
       } 
