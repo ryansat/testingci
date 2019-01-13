@@ -6,13 +6,27 @@
 	
    <body>  
       <h3>Your file was successfully uploaded!</h3>  
-		
       <ul> 
       <?php foreach ($upload_data as $item => $value):?> 
-         <li><?php echo $item;?>: <?php echo $value;?></li> 
+         <li><?php
+
+         if ($item == 'full_path')
+          {
+            // echo $item;
+             //$data = $item;
+         }
+
+          
+          ?> <?php 
+          if ($item == 'full_path')
+          {
+             //echo $value;
+             $data = $value;
+            }
+          ?></li> 
          <?php endforeach; ?>
       </ul>  
-		
+		<p> <?php echo $data;?> </p>
       <p><?php echo anchor('upload', 'Upload Another File!'); ?></p>  
    </body>
 	
