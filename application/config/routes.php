@@ -67,3 +67,5 @@ $route['pegawai/add'] = 'Pegawai_controller/add_Pegawai_view';
 $route['pegawai/add_view'] = 'Pegawai_controller/add_Pegawai_view'; 
 $route['pegawai/edit/(\d+)'] = 'Pegawai_controller/update_Pegawai_view/$1'; 
 $route['pegawai/delete/(\d+)'] = 'Pegawai_controller/delete_Pegawai/$1';
+
+$route['upload'] = 'Upload';
