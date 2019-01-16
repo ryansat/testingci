@@ -26,7 +26,7 @@ class Login_controller extends CI_Controller
       $password = $this->input->post('password');
 	  if($this->m_Login->login($username, $password))
 	  {
-		$this->session->set_userdata($data_session);
+		$this->session->set_userdata('users', 'login');
 		redirect(base_url("pegawai"));
 	  }
 	  else
